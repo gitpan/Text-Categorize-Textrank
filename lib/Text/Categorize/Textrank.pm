@@ -9,7 +9,7 @@ use Data::Dump qw(dump);
 BEGIN {
     use Exporter ();
     use vars qw($VERSION @ISA @EXPORT @EXPORT_OK %EXPORT_TAGS);
-    $VERSION     = '0.50';
+    $VERSION     = '0.51';
     @ISA         = qw(Exporter);
     @EXPORT      = qw(getTextrankOfListOfTokens);
     @EXPORT_OK   = qw(getTextrankOfListOfTokens);
@@ -25,13 +25,13 @@ C<Text::Categorize::Textrank> - Method to rank potential keywords of text.
 
 =head1 SYNOPSIS
 
-	use strict;
-	use warnings;
-	use Text::Categorize::Textrank;
-	use Data::Dump qw(dump);
-	my $listOfTokens = [ [qw(This is the first sentence)], [qw(Here is the second sentence)] ];
-	my $hashOfTextrankValues = getTextrankOfListOfTokens(listOfTokens => $listOfTokens);
-	dump $hashOfTextrankValues;
+  use strict;
+  use warnings;
+  use Text::Categorize::Textrank;
+  use Data::Dump qw(dump);
+  my $listOfTokens = [ [qw(This is the first sentence)], [qw(Here is the second sentence)] ];
+  my $hashOfTextrankValues = getTextrankOfListOfTokens(listOfTokens => $listOfTokens);
+  dump $hashOfTextrankValues;
 
 =head1 DESCRIPTION
 
@@ -261,7 +261,7 @@ categorize, keywords, keyphrases, nlp, pagerank, textrank
 
 This package implements the Textrank algorithm from the report
 <a href="http://bit.ly/akSJok">TextRank: Bringing Order into Texts</a>
-by <a href="http://www.cse.unt.edu/~rada/">Rada Mihalcea</a> and <a href="www.cse.unt.edu/~tarau/">Paul Tarau</a>;
+by <a href="http://www.cse.unt.edu/~rada/">Rada Mihalcea</a> and <a href="http://www.cse.unt.edu/~tarau/">Paul Tarau</a>;
 which is related to <a href="http://en.wikipedia.org/wiki/PageRank">pagerank</a>.
 
 =end html

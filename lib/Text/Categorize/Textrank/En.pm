@@ -12,7 +12,7 @@ use Data::Dump qw(dump);
 BEGIN {
     use Exporter ();
     use vars qw($VERSION @ISA @EXPORT @EXPORT_OK %EXPORT_TAGS);
-    $VERSION     = '0.50';
+    $VERSION     = '0.51';
     @ISA         = qw(Exporter);
     @EXPORT      = qw(getTextrankInfoOfText);
     @EXPORT_OK   = qw(getTextrankInfoOfText);
@@ -28,14 +28,14 @@ C<Text::Categorize::Textrank::En> - Find potential keywords in English text.
 
 =head1 SYNOPSIS
 
-	use strict;
-	use warnings;
-	use Text::Categorize::Textrank::En;
-	use Data::Dump qw(dump);
-	my $textrankerEn = Text::Categorize::Textrank::En->new();
-	my $text         = 'This is the first sentence. Here is the second sentence.';
-	my $results      = $textrankerEn->getTextrankInfoOfText(listOfText => [$text]);
-	dump $results->{hashOfTextrankValues};
+  use strict;
+  use warnings;
+  use Text::Categorize::Textrank::En;
+  use Data::Dump qw(dump);
+  my $textrankerEn = Text::Categorize::Textrank::En->new();
+  my $text         = 'This is the first sentence. Here is the second sentence.';
+  my $results      = $textrankerEn->getTextrankInfoOfText(listOfText => [$text]);
+  dump $results->{hashOfTextrankValues};
 
 =head1 DESCRIPTION
 
@@ -295,7 +295,7 @@ categorize, english, keywords, keyprhases, nlp, pagerank, textrank
 
 This package implements the Textrank algorithm from the report
 <a href="http://bit.ly/akSJok">TextRank: Bringing Order into Texts</a>
-by <a href="http://www.cse.unt.edu/~rada/">Rada Mihalcea</a> and <a href="www.cse.unt.edu/~tarau/">Paul Tarau</a>;
+by <a href="http://www.cse.unt.edu/~rada/">Rada Mihalcea</a> and <a href="http://www.cse.unt.edu/~tarau/">Paul Tarau</a>;
 which is related to <a href="http://en.wikipedia.org/wiki/PageRank">pagerank</a>.
 
 See the Lingua::EN::Tagger <a href="http://cpansearch.perl.org/src/ACOBURN/Lingua-EN-Tagger-0.15/README">README</a>
